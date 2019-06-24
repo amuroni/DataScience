@@ -19,3 +19,6 @@ print(1.0 / values)  # takes less than 11 milliseconds, using ufuncs
 end = time.time()
 print(end-start)
 
+# ufuncs in numpy are also useful for mean, max-min etc.
+big_array.mean()
+big_array.max()
