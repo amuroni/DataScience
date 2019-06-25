@@ -55,8 +55,15 @@ states = pd.DataFrame({"population": population, "area": area})  # combines teo 
 print(states.index)  # index attributes
 print(states.columns)  # columns attributes
 print(states["area"])  # returns the area column
+print(states.area)  # same as before, if column names are strings
+print(data["area"] is data.area)  # hint: True
 
 # creating a random pd df
-
 random_df = pd.DataFrame(np.random.rand(3, 2), columns=["foo", "bar"], index=[1, 2, 3])
-random_df.head()
+print(random_df["foo"][1])  # returns the value stored with index 1 in column foo
+print(random_df.loc[2])  # easier to localize specific values based on index
+
+# modifying the dataframe
+states["density"] = states.population/states.area  # this adds a column and put values into it
+print(states.values)  # puts ALL the values in a one-dimensional array
+print(states.T)  # transpose columns/rows
