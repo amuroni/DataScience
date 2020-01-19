@@ -56,7 +56,7 @@ print(states.index)  # index attributes
 print(states.columns)  # columns attributes
 print(states["area"])  # returns the area column
 print(states.area)  # same as before, if column names are strings
-print(data["area"] is data.area)  # hint: True
+print(states["area"] is states.area)  # hint: True
 
 # creating a random pd df
 random_df = pd.DataFrame(np.random.rand(3, 2), columns=["foo", "bar"], index=[1, 2, 3])
